@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>ABILITY 実績 資料</title>
+  <meta name="description" content="ABILITYの実績資料。スマホ最優先の読みやすいレイアウトで、目的×戦略／結果×写真を整理。" />
+  <style>
+    /* ======== Neo Green / Dark Advanced (mobile-first) ======== */
+    :root{
+      --bg-1:#071511; --bg-2:#0b221c;
+      --ink:#e9fff3;  --sub:#a6d9c4;
+      --accent:#22c55e; --accent-2:#06b6d4; --glow:#94f9c1;
+      --card:rgba(10,30,25,.62); --card-strong:rgba(13,38,32,.7);
+      --border:#1b3c31; --muted:#133026;
+      --warn:#ef4444;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP","BIZ UDPGothic",Roboto,Arial,Helvetica,sans-serif;line-height:1.8;text-wrap:pretty}
+    a{color:var(--glow);text-decoration:underline;text-underline-offset:3px}
+    a:hover{color:#bfffe0}
+    header{position:sticky;top:0;backdrop-filter:saturate(160%) blur(8px);background:linear-gradient(180deg,rgba(7,21,17,.9),rgba(7,21,17,.6));border-bottom:1px solid var(--border);z-index:50}
+    .wrap{max-width:1100px;margin:0 auto;padding:14px clamp(16px,3vw,28px)}
+    .title{display:flex;align-items:center;gap:12px}
+    .dot{width:10px;height:10px;border-radius:999px;background:radial-gradient(circle at 30% 30%,var(--glow),var(--accent))}
+    h1{font-size:clamp(20px,3.6vw,32px);margin:0}
+    .desc{color:var(--sub);font-size:clamp(12px,2.6vw,14px)}
+    .card{background:linear-gradient(180deg,var(--card),var(--card-strong));border:1px solid var(--border);border-radius:var(--radius);padding:14px 14px 16px;box-shadow:0 10px 28px rgba(0,0,0,.22);margin:18px 0}
+    .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:8px}
+    .tag{font:600 12px/1 var(--font,inherit);padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(9,35,28,.6);color:var(--sub);letter-spacing:.04em}
+    h2,h3{margin:0 0 6px}
+    h2{font-size:clamp(18px,3.4vw,24px)}
+    h3{font-size:clamp(15px,3vw,18px);color:var(--glow)}
+    .meta{color:var(--sub);font-size:13px}
+    .row{display:grid;gap:12px}
+    @media (min-width:720px){ .row{grid-template-columns:1fr 1fr} }
+    .kv{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .kv .pill{font-size:12px;border:1px solid var(--border);border-radius:999px;padding:4px 10px;background:rgba(9,35,28,.6);color:var(--sub)}
+    dl{margin:0}
+    dt{font-weight:700;color:#d6ffe9;margin-top:8px}
+    dd{margin:2px 0 8px}
+    .result{background:rgba(11,34,28,.55);border:1px dashed var(--border);border-radius:12px;padding:10px}
+    .result strong{color:#c7ffe2}
+    .media{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+    .media figure{margin:0}
+    .media img{display:block;max-width:220px;width:100%;height:auto;border-radius:12px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .media figcaption{font-size:12px;color:var(--sub);margin-top:4px;max-width:220px}
+    .links{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+    .caps{font-variant:all-small-caps;letter-spacing:.06em;color:var(--sub)}
+    footer{margin:40px 0 64px}
+    .contact{background:linear-gradient(180deg,rgba(9,35,28,.7),rgba(9,35,28,.4));border:1px solid var(--border);border-radius:var(--radius);padding:16px}
+    .muted{color:#99cdb7}
+    .small{font-size:12px}
+    /* Helper: easy media-slot extension */
+    .media-slot{display:flex;gap:10px;flex-wrap:wrap}
+    .media-slot img{max-width:180px;border-radius:10px;border:1px solid var(--border)}
+    /* portrait helper: 縦写真は高さを優先して小さめ表示 */
+    .media img.portrait{ width:auto; max-height:260px; }
+    @media (min-width:720px){ .media img.portrait{ max-height:300px; } }
+
+    /* --- 右寄せ・横並び固定（Porsche/浅草 香和/CAMELOTなど） --- */
+    .media.right{
+      justify-content:flex-end;  /* 右寄せ */
+      flex-wrap:nowrap;          /* 折り返さない */
+      gap:14px;
+    }
+    .media.right figure{ flex:0 0 auto; }
+    .media.right img{
+      width:auto;                 /* 既定の width:100% を上書き */
+      max-width:220px;            /* 2枚が横に収まる幅 */
+    }
+    @media (max-width:720px){
+      .media.right{ flex-wrap:wrap; justify-content:flex-end; }
+    }
+
+    /* --- 縦並び（Idea / REDWEST / THREE ARROWS / TEAM ONE GYM 用） --- */
+    .media.column{
+      flex-direction:column;     /* 縦積み */
+      align-items:flex-start;
+      gap:14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="title">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>ABILITY 実績 資料</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- ===== JR EAST (1) Instagram Reels ===== -->
+    <section class="card" id="jr-east-reels">
+      <div class="head">
+        <h2>JR東日本旅客鉄道株式会社</h2>
+        <span class="tag">Instagram リール施策</span>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="kv">
+            <div class="pill">東北新幹線 利用者増加施策</div>
+            <div class="pill">FW: 100万人</div>
+          </div>
+          <dl>
+            <dt>目的</dt>
+            <dd>東北新幹線の利用者増加。</dd>
+            <dt>戦略・制作内容</dt>
+            <dd>
+              秋：岩手県／冬：秋田県／春：福島県<br/>
+              Instagram リール投稿／インフルエンサー「くぼたび」キャスティング（
+              <a href="https://www.instagram.com/kubo_tabi_/" target="_blank" rel="noopener">Instagram @kubo_tabi_</a>）
+            </dd>
+          </dl>
+          <div class="links">
+            <span class="caps">関連リンク</span>
+            <a href="https://www.instagram.com/reel/DA-fzOMokyj/" target="_blank" rel="noopener">秋施策：岩手県（リール）</a>
+            <a href="https://www.instagram.com/reel/DA-fzOMokyj/" target="_blank" rel="noopener">冬施策：秋田県（リール）</a>
+            <a href="https://www.instagram.com/reel/DA-fzOMokyj/" target="_blank" rel="noopener">春施策：福島県（リール）</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="result">
+            <p><strong>結果</strong></p>
+            <ul>
+              <li>1本目リール動画が<strong>220万再生</strong>で高エンゲージメント。</li>
+              <li>総再生数<strong>430万再生</strong>を達成、認知度も大幅に上昇。</li>
+            </ul>
+          </div>
+
+          <!-- Media：01.jpg -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/01.jpg" alt="JR東日本 リール施策 参考画像（岩手/秋田/福島）" loading="lazy" />
+              <figcaption>引用元：Instagram リール（<a href="https://www.instagram.com/reel/DA-fzOMokyj/" target="_blank" rel="noopener">DA-fzOMokyj</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== JR EAST (2) YouTube Long ===== -->
+    <section class="card" id="jr-east-youtube">
+      <div class="head">
+        <h2>JR東日本旅客鉄道株式会社</h2>
+        <span class="tag">YouTube 長尺施策</span>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="kv">
+            <div class="pill">東北新幹線 利用者増加施策</div>
+            <div class="pill">FW: 100万人</div>
+          </div>
+          <dl>
+            <dt>目的</dt>
+            <dd>東北新幹線の利用者増加。</dd>
+            <dt>戦略・制作内容</dt>
+            <dd>YouTube 長尺投稿／インフルエンサー「くぼたび」キャスティング（<a href="https://www.instagram.com/kubo_tabi_/" target="_blank" rel="noopener">Instagram @kubo_tabi_</a>）</dd>
+          </dl>
+          <div class="links">
+            <span class="caps">関連リンク（季節別）</span>
+            <a href="https://www.youtube.com/watch?v=IHdR1gt0dMA" target="_blank" rel="noopener">秋：岩手県</a>
+            <a href="https://www.youtube.com/watch?v=BGDjfUb-nrI" target="_blank" rel="noopener">冬：秋田県</a>
+            <a href="https://www.youtube.com/watch?v=l4f_3w7wgj0&t=1579s" target="_blank" rel="noopener">春：福島県</a>
+          </div>
+        </div>
+        <div>
+          <div class="result">
+            <p><strong>結果</strong></p>
+            <ul>
+              <li>長尺で詳しい説明を入れたことで「訪問意向」コメントが増加。</li>
+              <li>総再生数は<strong>63万再生</strong>（<span class="small">計測日：2025/05/12</span>）。</li>
+            </ul>
+          </div>
+
+          <!-- Media：02/03/04（縦想定でportrait） -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/02.jpg" alt="JR東日本 長尺施策 参考画像（縦）" class="portrait" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://www.youtube.com/watch?v=IHdR1gt0dMA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=IHdR1gt0dMA</a>）</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/03.jpg" alt="JR東日本 長尺施策 参考画像（縦）" class="portrait" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://www.youtube.com/watch?v=BGDjfUb-nrI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=BGDjfUb-nrI</a>）</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/04.jpg" alt="JR東日本 長尺施策 参考画像（縦）" class="portrait" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://www.youtube.com/watch?v=l4f_3w7wgj0&t=1579s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=l4f_3w7wgj0&t=1579s</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== JR EAST (3) 地温泉（Maibal Travel） ===== -->
+    <section class="card" id="jr-east-jionsen">
+      <div class="head">
+        <h2>JR東日本旅客鉄道株式会社</h2>
+        <span class="tag">ブランド「地温泉」の認知</span>
+      </div>
+
+      <div class="row">
+        <div>
+          <dl>
+            <dt>目的</dt>
+            <dd>JR東日本が認めた秘湯35宿「地温泉」の認知向上。</dd>
+            <dt>戦略・制作内容</dt>
+            <dd>
+              温泉・旅行好きのALLターゲット＋20〜30代女性へ訴求。<br/>
+              YouTube LONG投稿／旅行YouTuber「Maibal Travel」起用（<a href="https://www.youtube.com/@maibaru" target="_blank" rel="noopener">@maibaru</a>）
+            </dd>
+          </dl>
+          <div class="links">
+            <span class="caps">投稿URL</span>
+            <a href="https://www.youtube.com/watch?v=ugFitCsSEY0&t=80s" target="_blank" rel="noopener">YouTube（該当動画）</a>
+          </div>
+        </div>
+        <div>
+          <div class="result">
+            <p><strong>結果</strong></p>
+            <ul>
+              <li>インプレッション<strong>200万超</strong>で広くリーチ。</li>
+              <li>「訪問意向」コメント率は<strong>9.96%</strong>を達成。</li>
+            </ul>
+          </div>
+
+          <!-- Media：05.jpg -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/05.jpg" alt="JR東日本 地温泉 認知施策 参考画像" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://www.youtube.com/watch?v=ugFitCsSEY0&t=80s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ugFitCsSEY0&t=80s</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 湯河原温泉観光協会 ===== -->
+    <section class="card" id="yugawara">
+      <div class="head">
+        <h2>湯河原温泉観光協会</h2>
+        <span class="tag">認知拡大</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>目的</dt><dd>認知拡大。</dd>
+            <dt>戦略・制作内容</dt><dd>キャスティング／映像制作。ドローンや360°カメラを起用し臨場感ある映像を制作。</dd>
+          </dl>
+          <div class="links">
+            <span class="caps">関連リンク</span>
+            <a href="https://www.youtube.com/watch?v=sFDzgS3GZtI" target="_blank" rel="noopener">YouTube（プロモーション映像）</a>
+          </div>
+        </div>
+        <div>
+          <div class="result">
+            <p><strong>結果</strong></p>
+            <ul>
+              <li>リーチ数向上により翌年の来場者数が<strong>200%増加</strong>。</li>
+              <li>当日参加者からの反応も良好。</li>
+            </ul>
+          </div>
+
+          <!-- Media：06.jpg -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/06.jpg" alt="湯河原温泉観光協会 プロモーション映像 参考画像" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://www.youtube.com/watch?v=sFDzgS3GZtI" target="_blank" rel="noopener">https://www.youtube.com/watch?v=sFDzgS3GZtI</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ポルシェ 南青山店 ===== -->
+    <section class="card" id="porsche">
+      <div class="head">
+        <h2>ポルシェ 南青山店</h2>
+        <span class="tag">展示会アフタームービー</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>目的</dt><dd>新型マカン展示会のアフタームービー制作。</dd>
+            <dt>戦略・制作内容</dt><dd>即出し動画1本／スチール50枚。集客と車両販売に向けた施策。</dd>
+          </dl>
+          <div class="links">
+            <span class="caps">URL</span>
+            <a href="https://youtube.com/shorts/Uig5_frzq1o" target="_blank" rel="noopener">YouTube Shorts</a>
+          </div>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>現在調査中。</p></div>
+
+          <!-- 07/08.jpg（右寄せ・横並び） -->
+          <div class="media right" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/07.jpg" alt="ポルシェ南青山店 新型マカン展示会 参考画像 1" loading="lazy" />
+              <figcaption>引用元：YouTube Shorts（<a href="https://youtube.com/shorts/Uig5_frzq1o" target="_blank" rel="noopener">https://youtube.com/shorts/Uig5_frzq1o</a>）</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/08.jpg" alt="ポルシェ南青山店 新型マカン展示会 参考画像 2" loading="lazy" />
+              <figcaption>引用元：YouTube Shorts（<a href="https://youtube.com/shorts/Uig5_frzq1o" target="_blank" rel="noopener">https://youtube.com/shorts/Uig5_frzq1o</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 浅草 香和 ===== -->
+    <section class="card" id="asakusa-kawa">
+      <div class="head">
+        <h2>浅草 香和</h2>
+        <span class="tag">グランドオープン広告</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>目的</dt><dd>グランドオープンの広告動画作成。</dd>
+            <dt>戦略・制作内容</dt><dd>浅草の観光スポットで撮影。日本人＆外国人向けに縦型動画1本／スチール100枚。</dd>
+          </dl>
+          <div class="links">
+            <span class="caps">URL</span>
+            <a href="https://youtube.com/shorts/Uig5_frzq1o" target="_blank" rel="noopener">YouTube Shorts</a>
+          </div>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>広告クリック数が高く、認知拡大に寄与。</p></div>
+
+          <!-- 09/010.jpg（右寄せ・横並び） -->
+          <div class="media right" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/09.jpg" alt="浅草 香和 グランドオープン広告 参考画像 1" loading="lazy" />
+              <figcaption>引用元：YouTube Shorts（<a href="https://youtube.com/shorts/Uig5_frzq1o" target="_blank" rel="noopener">https://youtube.com/shorts/Uig5_frzq1o</a>）</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/010.jpg" alt="浅草 香和 グランドオープン広告 参考画像 2" loading="lazy" />
+              <figcaption>引用元：YouTube Shorts（<a href="https://youtube.com/shorts/Uig5_frzq1o" target="_blank" rel="noopener">https://youtube.com/shorts/Uig5_frzq1o</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 株式会社イデア ===== -->
+    <section class="card" id="idea">
+      <div class="head">
+        <h2>株式会社イデア</h2>
+        <span class="tag">CM動画</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>目的</dt><dd>CM動画制作。</dd>
+            <dt>戦略・制作内容</dt><dd>企画／撮影／編集／ディレクション／After Effects。30秒／15秒の両尺を納品。</dd>
+          </dl>
+          <div class="links">
+            <span class="caps">HP/動画</span>
+            <a href="https://www.youtube.com/watch?v=ldSxOsk6v-A" target="_blank" rel="noopener">YouTube（CM）</a>
+          </div>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>CM公開後、インターネット応募が<strong>1.5倍</strong>に増加。</p></div>
+
+          <!-- 011/012.jpg（縦並び） -->
+          <div class="media column" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/011.jpg" alt="株式会社イデア CM動画 参考画像 1" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://www.youtube.com/watch?v=ldSxOsk6v-A" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ldSxOsk6v-A</a>）</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/012.jpg" alt="株式会社イデア CM動画 参考画像 2" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://www.youtube.com/watch?v=ldSxOsk6v-A" target="_blank" rel="noopener">https://www.youtube.com/watch?v=ldSxOsk6v-A</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 株式会社 REDWEST ===== -->
+    <section class="card" id="redwest">
+      <div class="head">
+        <h2>株式会社 REDWEST</h2>
+        <span class="tag">イベント認知拡大</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>目的</dt><dd>イベントの認知拡大。</dd>
+            <dt>戦略・制作内容</dt><dd>即出し動画1本＋アフタームービー1本を納品。集客強化。</dd>
+          </dl>
+          <div class="links">
+            <span class="caps">URL</span>
+            <a href="https://youtu.be/VM7mzseDyyk" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>次回参加者が応募総数を超え、イベント発展に寄与。</p></div>
+
+          <!-- 013/014.jpg（縦並び） -->
+          <div class="media column" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/013.jpg" alt="株式会社 REDWEST イベント認知拡大 参考画像 1" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://youtu.be/VM7mzseDyyk" target="_blank" rel="noopener">https://youtu.be/VM7mzseDyyk</a>）</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/014.jpg" alt="株式会社 REDWEST イベント認知拡大 参考画像 2" loading="lazy" />
+              <figcaption>引用元：YouTube（<a href="https://youtu.be/VM7mzseDyyk" target="_blank" rel="noopener">https://youtu.be/VM7mzseDyyk</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NFC名刺 ===== -->
+    <section class="card" id="nfc">
+      <div class="head">
+        <h2>NFC名刺</h2>
+        <span class="tag">ビジネスカード最適化</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>資料</dt>
+            <dd><a href="https://docs.google.com/presentation/d/1VJQ4IRWb5jtWuXwh_gYd1bRhjiJ1G5BFzmKnYXiQjXw/edit?usp=sharing" target="_blank" rel="noopener">Googleスライド</a></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gimix ===== -->
+    <section class="card" id="gimix">
+      <div class="head">
+        <h2>Gimix</h2>
+        <span class="tag">顧客獲得</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>戦略・制作内容</dt>
+            <dd>デジタルサイネージ／モーションロゴ。店内アトラクションを映像で表現。オリジナルBGMを使用。</dd>
+            <dt>HP</dt>
+            <dd><a href="https://gj1y900.gorp.jp/" target="_blank" rel="noopener">https://gj1y900.gorp.jp/</a></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>新規顧客が<strong>200%増加</strong>、認知度も大幅上昇。</p></div>
+
+          <!-- 015.jpg（単枚） -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/015.jpg" alt="Gimix 顧客獲得 参考画像" loading="lazy" />
+              <figcaption>引用元：HP（<a href="https://gj1y900.gorp.jp/" target="_blank" rel="noopener">https://gj1y900.gorp.jp/</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== THREE ARROWS ===== -->
+    <section class="card" id="three-arrows">
+      <div class="head">
+        <h2>THREE ARROWS</h2>
+        <span class="tag">HP制作／撮影</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>戦略・制作内容</dt>
+            <dd>HP制作／モーションロゴ／店内・従業員撮影。SNS映えする色味で写真素材を提供。</dd>
+            <dt>HP</dt>
+            <dd><a href="https://three-arrows.jp/" target="_blank" rel="noopener">https://three-arrows.jp/</a></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>HP滞在率が増加し、物件問い合わせが増加。</p></div>
+
+          <!-- 016/017.jpg（縦並び） -->
+          <div class="media column" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/016.jpg" alt="THREE ARROWS HP制作／撮影 参考画像 1" loading="lazy" />
+              <figcaption>引用元：HP（<a href="https://three-arrows.jp/" target="_blank" rel="noopener">https://three-arrows.jp/</a>）</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/017.jpg" alt="THREE ARROWS HP制作／撮影 参考画像 2" loading="lazy" />
+              <figcaption>引用元：HP（<a href="https://three-arrows.jp/" target="_blank" rel="noopener">https://three-arrows.jp/</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEAM ONE GYM ===== -->
+    <section class="card" id="team-one-gym">
+      <div class="head">
+        <h2>TEAM ONE GYM</h2>
+        <span class="tag">HP制作／撮影</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>戦略・制作内容</dt>
+            <dd>HP制作／店内・従業員撮影。著名格闘家「皇治」を前面にしたデザイン。メニューを見やすく表現。</dd>
+            <dt>HP</dt>
+            <dd><a href="https://teamonegym.com/" target="_blank" rel="noopener">https://teamonegym.com/</a></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>HP閲覧数が増え、会員登録が<strong>5倍</strong>に。</p></div>
+          <!-- 018/019.jpg（縦並び）＋引用元：HP -->
+          <div class="media column" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/018.jpg" alt="TEAM ONE GYM HP制作／撮影 参考画像 1" loading="lazy" />
+              <figcaption>引用元：HP（<a href="https://teamonegym.com/" target="_blank" rel="noopener">https://teamonegym.com/</a>）</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/019.jpg" alt="TEAM ONE GYM HP制作／撮影 参考画像 2" loading="lazy" />
+              <figcaption>引用元：HP（<a href="https://teamonegym.com/" target="_blank" rel="noopener">https://teamonegym.com/</a>）</figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CARNIVAL ===== -->
+    <section class="card" id="carnival">
+      <div class="head">
+        <h2>CARNIVAL</h2>
+        <span class="tag">新規顧客獲得（接待）</span>
+      </div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>戦略・制作内容</dt>
+            <dd>「ゴージャス」テーマで照明・装飾を整え撮影。神秘的な空間を演出。</dd>
+            <dt>HP</dt>
+            <dd><a href="https://carnivaltokyo.jp/" target="_blank" rel="noopener">https://carnivaltokyo.jp/</a></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>HP経由の新規来店が<strong>200%増加</strong>。問い合わせ増により売上にも貢献。</p></div>
+
+          <!-- 020.jpg（単枚）＋引用（HP） -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/020.jpg" alt="CARNIVAL 新規顧客獲得（接待） 参考画像" loading="lazy" />
+              <figcaption>
+                引用元：HP（
+                <a href="https://carnivaltokyo.jp/" target="_blank" rel="noopener">https://carnivaltokyo.jp/</a>
+                ）
+              </figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 株式会社 日榮（廃棄処理） ===== -->
+    <section class="card" id="nichiei">
+      <div class="head"><h2>株式会社 日榮（廃棄処理）</h2><span class="tag">求人募集（SNS）</span></div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>戦略・制作内容</dt>
+            <dd>TikTok運用。従業員の裏側企画→魅力を発信後に求人訴求。Instagram／YouTube Shortsにも横展開。</dd>
+            <dt>TikTok</dt>
+            <dd><a href="https://www.tiktok.com/@nichiei_club" target="_blank" rel="noopener">@nichiei_club</a></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="result">
+            <p><strong>結果</strong></p>
+            <ul>
+              <li>3ヶ月で求人問い合わせが増加。</li>
+              <li>3ヶ月でSNS運用の社内内製化に成功（切替後は伸び悩み）。</li>
+              <li>複数SNSのフォロワーが<strong>2倍</strong>に増加。</li>
+            </ul>
+          </div>
+
+          <!-- 021.jpg（単枚）＋引用元：TikTok -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/021.jpg" alt="株式会社 日榮（廃棄処理） 求人募集 参考画像" loading="lazy" />
+              <figcaption>
+                引用元：TikTok（
+                <a href="https://www.tiktok.com/@nichiei_club" target="_blank" rel="noopener">@nichiei_club</a>
+                ）
+              </figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TK NIGHT CLUB ===== -->
+    <section class="card" id="tk-night-club">
+      <div class="head"><h2>TK NIGHT CLUB（NIGHT CLUB）</h2><span class="tag">集客アップ／ブランディング</span></div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>戦略・制作内容</dt><dd>Instagram運用。ターゲットを絞った動画制作。背景色を揃えた強化写真を作成。</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/tk_nightclub/" target="_blank" rel="noopener">@tk_nightclub</a></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="result">
+            <p><strong>結果</strong></p>
+            <ul>
+              <li>非フォロワーリーチ<strong>200%</strong>増。</li>
+              <li>平均いいね<strong>300%</strong>増。</li>
+              <li>来場者数<strong>150%</strong>増。</li>
+            </ul>
+          </div>
+
+          <!-- 022.jpg（単枚）＋引用元：Instagram -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/022.jpg" alt="TK NIGHT CLUB 集客アップ／ブランディング 参考画像" loading="lazy" />
+              <figcaption>
+                引用元：Instagram（
+                <a href="https://www.instagram.com/tk_nightclub/" target="_blank" rel="noopener">@tk_nightclub</a>
+                ）
+              </figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LED AMUSUMENT ===== -->
+    <section class="card" id="led-amusement">
+      <div class="head"><h2>LED AMUSUMENT</h2><span class="tag">売上アップ／認知向上</span></div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>戦略・制作内容</dt><dd>Instagram運用（フィード＋リールでバズ）。主要ナイトクラブへ機材設置。トレンド景品を提案・実施。</dd>
+            <dt>Instagram</dt><dd><a href="https://www.instagram.com/led_gacha/" target="_blank" rel="noopener">@led_gacha</a></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="result"><p><strong>結果</strong></p><p>売上／契約店舗数が<strong>300%</strong>増加。</p></div>
+
+          <!-- 023.jpg（単枚）＋引用元：Instagram -->
+          <div class="media" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/023.jpg" alt="LED AMUSUMENT 売上アップ／認知向上 参考画像" loading="lazy" />
+              <figcaption>
+                引用元：Instagram（
+                <a href="https://www.instagram.com/led_gacha/" target="_blank" rel="noopener">@led_gacha</a>
+                ）
+              </figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAMELOT ===== -->
+    <section class="card" id="camelot">
+      <div class="head"><h2>CAMELOT</h2><span class="tag">集客アップ／求人募集</span></div>
+      <div class="row">
+        <div>
+          <dl>
+            <dt>戦略・制作内容</dt><dd>YouTube運用。従業員を演者に企画構築。</dd>
+            <dt>YouTube</dt><dd><a href="https://youtube.com/channel/UCNeFfm_Mqx2M0Ns2s9ItV1w?si=FkOm-1MzHdZ_cW9A" target="_blank" rel="noopener">公式チャンネル</a></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="result">
+            <p><strong>結果</strong></p>
+            <ul>
+              <li>チャンネル登録増に伴い再生数増。</li>
+              <li>求人問い合わせ<strong>5倍</strong>に。</li>
+              <li>ショート企画で<strong>200万再生</strong>を記録。</li>
+            </ul>
+          </div>
+
+          <!-- 024/025.jpg（横並び・右寄せ）＋引用元：YouTube -->
+          <div class="media right" style="margin-top:10px">
+            <figure>
+              <img src="assets/jr-east/ig/024.jpg" alt="CAMELOT 集客アップ／求人募集 参考画像 1" loading="lazy" />
+              <figcaption>
+                引用元：YouTube（
+                <a href="https://youtube.com/channel/UCNeFfm_Mqx2M0Ns2s9ItV1w?si=FkOm-1MzHdZ_cW9A" target="_blank" rel="noopener">公式チャンネル</a>
+                ）
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="assets/jr-east/ig/025.jpg" alt="CAMELOT 集客アップ／求人募集 参考画像 2" loading="lazy" />
+              <figcaption>
+                引用元：YouTube（
+                <a href="https://youtube.com/channel/UCNeFfm_Mqx2M0Ns2s9ItV1w?si=FkOm-1MzHdZ_cW9A" target="_blank" rel="noopener">公式チャンネル</a>
+                ）
+              </figcaption>
+            </figure>
+            <div class="media-slot" aria-label="追加メディアスロット"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="contact">
+      <h3>お問い合わせ</h3>
+      <p class="muted">お見積りのご依頼はこちら</p>
+      <p class="small">富山 隼一 / <a href="mailto:tomiyama.junichi1985@gmail.com">tomiyama.junichi1985@gmail.com</a></p>
+    </div>
+    <p class="small muted" style="margin-top:10px">※ 各セクションの<span class="caps">media-slot</span>内に追加画像を必要に応じて挿入できます。</p>
+  </footer>
+
+  <script>
+    // 外部リンクは新規タブで開く（セキュア設定）。
+    document.querySelectorAll('a[href^="http"]').forEach(a=>{
+      a.setAttribute('target','_blank');
+      a.setAttribute('rel','noopener');
+    });
+  </script>
+</body>
+</html>
